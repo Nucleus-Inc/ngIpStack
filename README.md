@@ -7,5 +7,4 @@ The unofficial [IpStack](https://ipstack.com/) SDK for AngularJS (AKA Angular 1)
 You can get it on npm.
 
 ```shell
-npm install ngIpStack --save
-``
+$ npm install ngIpStack --save

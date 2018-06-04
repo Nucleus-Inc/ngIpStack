@@ -8,7 +8,9 @@ import rename from 'gulp-rename'
 import yarn from 'gulp-yarn'
 import minify from 'gulp-babel-minify'
 import clean from 'gulp-clean'
+import concat from 'gulp-concat'
 import umd from 'gulp-umd'
+import patterns from 'umd-templates'
 import karma from 'karma'
 
 const karmaServer = karma.Server
@@ -18,8 +20,20 @@ gulp.task('yarn', () => {
     .pipe(yarn())
 })
 
+gulp.task('concat', () => {
+  return gulp.src(['src/*.js'])
+    .pipe(babel({
+      presets: ['es2015']
+    }))
+    .pipe(concat({
+      newLine: ';',
+      path: 'ngIpStack.js'
+    }))
+    .pipe(gulp.dest('tmp'))
+})
+
 gulp.task('minify', () => {
-  return gulp.src('dist/foo.js')
+  return gulp.src('dist/ngIpStack.js')
     .pipe(minify({
       mangle: false
     }))
@@ -28,27 +42,43 @@ gulp.task('minify', () => {
 })
 
 gulp.task('clean', () => {
-  // return gulp.src(['public/tmp','public/dist/app.css','public/dist/config.js','public/dist/app.js'], {read: false})
-  //   .pipe(clean({force: true}))
+  return gulp.src(['tmp'], {read: false})
+    .pipe(clean({force: true}))
+})
+
+gulp.task('umd', function() {
+  return gulp.src('tmp/*.js')
+    .pipe(babel({
+      presets: ['es2015']
+    }))
+    .pipe(umd({
+      dependencies: function(file) {
+        return [
+          {
+            name: 'angular',
+            amd: 'angular',
+            cjs: 'angular',
+            global: 'angular',
+            param: 'angular'
+          }
+        ];
+      },
+      namespace: function(file) {
+        return 'ngIpStack'
+      },
+      template: patterns.commonjsStrict.path
+    }))
+    .pipe(gulp.dest('dist'))
 })
 
 gulp.task('watch', () => {
   gulp.watch('gulpfile.babel.js', () => {
-    runSequence('yarn','umd','minify')
+    runSequence('yarn','concat','umd')
   })
   gulp.watch(['src/*.js'], () => {
-    runSequence('yarn','umd','minify')
+    runSequence('yarn','concat','umd')
   })
 })
-
-gulp.task('umd', function() {
-  return gulp.src('src/*.js')
-    .pipe(babel({
-      presets: ['es2015']
-    }))
-    .pipe(umd())
-    .pipe(gulp.dest('dist'));
-});
 
 gulp.task('test', (done) => {
   karmaServer.start({
@@ -58,9 +88,9 @@ gulp.task('test', (done) => {
 })
 
 gulp.task('dev', () => {
-  runSequence('yarn','umd','minify',['watch'])
+  runSequence('yarn','concat','umd','minify',['watch'])
 })
 
 gulp.task('default', () => {
-  runSequence('yarn','umd','minify','clean',['watch'])
+  runSequence('yarn','concat','umd','minify','clean',['watch'])
 })
