@@ -1,0 +1,19 @@
+{
+  "name": "ngipstack",
+  "version": "1.0.0",
+  "description": "A set of AngularJS directives/helpers for using IpStack with AngularJS",
+  "main": "js/angular.ipstack.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nucleus-Inc/ngIpStack.git"
+  },
+  "author": "Eduardo Castro",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Nucleus-Inc/ngIpStack/issues"
+  },
+  "homepage": "https://github.com/Nucleus-Inc/ngIpStack#readme"
+}
