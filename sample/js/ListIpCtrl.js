@@ -11,7 +11,7 @@ sampleAppControllers.controller('ListIpCtrl', ['$scope','requester',
     requester.setApiKey('your-api-key-ip-stack');
 
     requester.getIp().then(function(res){
-      vm.myIpAddress = res.data.ip;
+      vm.myIpAddress = res.data.ip || res.data.error.info;
     });
 
   }]);
