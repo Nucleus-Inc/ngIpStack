@@ -6,8 +6,12 @@ var sampleAppControllers = angular.module('sampleAppControllers', []);
 sampleAppControllers.controller('ListIpCtrl', ['$scope','requester',
   function($scope, requester) {
 
-    requester.setApiKey('a55f6757107c084b4c5b1a68e556956e')
+    var vm = this;
 
-    console.log(requester.getApi())
+    requester.setApiKey('your-api-key-ip-stack');
+
+    requester.getIp().then(function(res){
+      vm.myIpAddress = res.data.ip;
+    });
 
   }]);
