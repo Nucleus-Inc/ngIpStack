@@ -24,7 +24,7 @@ ipStackModule.factory('requester', ['$http', function ($http) {
     setApiKey: function setApiKey(accessKey) {
       apiKey = accessKey;
     },
-    getApi: function getApi() {
+    getApiKey: function getApiKey() {
       return apiKey;
     }
   };

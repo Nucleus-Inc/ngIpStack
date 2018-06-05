@@ -170,6 +170,14 @@ amqplib@^0.5.2:
     readable-stream "1.x >=1.1.9"
     safe-buffer "^5.0.1"
 
+angular-mocks@^1.7.0:
+  version "1.7.0"
+  resolved "https://registry.yarnpkg.com/angular-mocks/-/angular-mocks-1.7.0.tgz#4957aaf966b6fc36edd6ac381a60814f7c05de3f"
+
+angular@^1.7.0:
+  version "1.7.0"
+  resolved "https://registry.yarnpkg.com/angular/-/angular-1.7.0.tgz#e45d679fc8d81040a4894c7ccc16a4e1ad0a9ca6"
+
 ansi-colors@^1.0.1:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/ansi-colors/-/ansi-colors-1.1.0.tgz#6374b4dd5d4718ff3ce27a671a3b1cad077132a9"
@@ -2920,10 +2928,6 @@ karma-mocha-reporter@^2.2.5:
     chalk "^2.1.0"
     log-symbols "^2.1.0"
     strip-ansi "^4.0.0"
-
-karma-ng-html2js-preprocessor@^0.1.2:
-  version "0.1.2"
-  resolved "https://registry.yarnpkg.com/karma-ng-html2js-preprocessor/-/karma-ng-html2js-preprocessor-0.1.2.tgz#c9402cb577d891bfed1a9ff064f0cdb9a4fdc9b1"
 
 karma-phantomjs-launcher@^1.0.4:
   version "1.0.4"

@@ -9,7 +9,7 @@ ipStackModule.factory('requester', ['$http', ($http) => {
     setApiKey: (accessKey) => {
       apiKey = accessKey
     },
-    getApi: () => {
+    getApiKey: () => {
       return apiKey
     }
   }
