@@ -12,6 +12,13 @@
   },
   "author": "Eduardo Castro",
   "license": "ISC",
+  "keywords": [
+    "angular",
+    "ipstack",
+    "ngipstack",
+    "ipv4",
+    "ipv6"
+  ],
   "bugs": {
     "url": "https://github.com/Nucleus-Inc/ngIpStack/issues"
   },
