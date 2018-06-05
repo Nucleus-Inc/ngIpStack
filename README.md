@@ -2,7 +2,8 @@
 
 [![Build Status](https://travis-ci.org/Nucleus-Inc/ngIpStack.svg?branch=master)](https://travis-ci.org/Nucleus-Inc/ngIpStack)
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com)
-[![npm](https://img.shields.io/npm/v/ngIpStack.svg)](https://www.npmjs.com/package/ngipstack)
+[![David](https://img.shields.io/david/expressjs/express.svg)]()
+[![npm](https://img.shields.io/npm/v/npm.svg)](https://www.npmjs.com/package/ngipstack)
 
 The unofficial [IpStack](https://ipstack.com/) SDK for AngularJS (AKA Angular 1)
 
