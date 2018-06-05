@@ -9,6 +9,7 @@
 }(this, function (exports, angular) {
 'use strict';
 
+var NgIpStack = 'ipStack';
 var ipStackModule = angular.module('ipStack', []);
 ipStackModule.factory('requester', ['$http', function ($http) {
   var apiKey = null;

@@ -1,3 +1,4 @@
+let NgIpStack = 'ipStack'
 let ipStackModule = angular.module('ipStack',[])
 ipStackModule.factory('requester', ['$http', ($http) => {
   let apiKey = null
