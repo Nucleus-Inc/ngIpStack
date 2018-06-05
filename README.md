@@ -63,3 +63,20 @@ app.controller('myController', ['$scope', 'requester',
     }
 ]);
 ```
+
+## Build
+
+```
+$ yarn install
+$ gulp build
+```
+
+### Tests
+
+- Unit:
+ - Uses [Karma](http://karma-runner.github.io) + [Jasmine](http://jasmine.github.io/)
+ - Files: `specs/*.spec.js`
+
+```
+$ gulp test
+```
