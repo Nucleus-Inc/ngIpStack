@@ -67,8 +67,8 @@ app.controller('myController', ['$scope', 'requester',
 ## Build
 
 ```
-yarn install
-gulp build
+$ yarn install
+$ gulp build
 ```
 
 ### Tests
