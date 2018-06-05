@@ -1,6 +1,6 @@
 {
   "name": "ngipstack",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "A set of AngularJS directives/helpers for using IpStack with AngularJS",
   "main": "js/foo.js",
   "scripts": {
