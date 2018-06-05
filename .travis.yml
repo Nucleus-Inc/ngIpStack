@@ -1,9 +1,11 @@
 language: node_js
-
 node_js:
-  - "7.9"
-
+- '7.9'
 before_script:
-  - yarn install
-
+- yarn install
 script: gulp build && gulp test
+deploy:
+  provider: npm
+  email: eduardo@nucleus.eti.br
+  api_key:
+    secure: UCWFM9IkOIXIhHjONr8l0I7OsCKp+YLdRVUVPhD+vOhwcJh+5e8IKZ1bgaFfj4+Z1pdypMsyhMvnR/l1SHdxbf/NfPeZpReLzYvbI5kJAcobUQKz4lj4t7agsxuEvOoxXnAEjYmQ0Mv5tttTXnB6ZO9v1rUPc1qqtbzsdzaDGmmleYBn720pndQcoGHh62y1qX1VQiEy1PieC/BD+9S6b8GHlGI4AUSM11q7DeCaTUXwIx7f7rRo1XUEmp331f2eqJZzf7esv1dLsW0dk5EWaSBFFQ7WAgCDzTbd1eN+2/Y2JQ3QUa6nnGqBCW1/VwmKTVsG5lTPPz1zINYnUsvzWVkQ5K64RB6lMnBtf8Ee+eNHQoSBqxaXG034OoTjIPRu4jvKrxuuSJwZKSMF5nJ3pOHNMQaq15N+JPwQXQwkAuADZvxNpM9dpu16CpEuY/cHTOeF+/mp8FTHPbAu1fHJ6fsxl+NUhfkAymPWSO8VKuPB1SEKa8hfFnHepomjFj9QNsC8YNpFEVVWqWk+T/4CMzKrfHPsx+pnHZPGAqgkoGN9P//aOTi6bacvAsqdGjMgQqrP9u6cfHPtJaIDxr5lyWbgQl/3yzCup4W5nwIMJ9sRbiDWYxRXulJN9iogcMFlY/LgCyvA3aSxp2YRxU/WQcA24oxZKOSDdi9ZKTORw7Y=
