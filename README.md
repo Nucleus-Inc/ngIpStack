@@ -1,5 +1,7 @@
 # ngIpStack
 
+[![Build Status](https://travis-ci.org/Nucleus-Inc/ngIpStack.svg?branch=master)](https://travis-ci.org/Nucleus-Inc/ngIpStack)
+
 The unofficial [IpStack](https://ipstack.com/) SDK for AngularJS (AKA Angular 1)
 
 ## Requirements

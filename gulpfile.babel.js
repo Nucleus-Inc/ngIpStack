@@ -91,6 +91,10 @@ gulp.task('dev', () => {
   runSequence('yarn','concat','umd','minify',['watch'])
 })
 
+gulp.task('build', () => {
+  runSequence('yarn','concat','umd','minify','clean')
+})
+
 gulp.task('default', () => {
   runSequence('yarn','concat','umd','minify','clean',['watch'])
 })
