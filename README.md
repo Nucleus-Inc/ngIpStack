@@ -38,7 +38,7 @@ app.controller('myController', ['$scope', 'requester',
 
         requester.setApiKey('your-api-key-ip-stack');
 
-        console.log(requester.getApi());
+        console.log(requester.getApiKey());
 
     }
 ]);
