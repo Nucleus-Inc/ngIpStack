@@ -28,7 +28,7 @@
     })
 
     it('should have status 200 on getIp', () => {
-      $httpBackend.whenGET('http://api.ipstack.com/check?access_key=123').respond((method, url, data) => {
+      $httpBackend.whenGET('https://api.ipstack.com/check?access_key=123').respond((method, url, data) => {
         return [200, {
                         "ip": "172.19.1.45",
                         "type": "ipv4",
@@ -67,7 +67,7 @@
     })
 
     it('should have ip on getIp', () => {
-      $httpBackend.whenGET('http://api.ipstack.com/check?access_key=123').respond((method, url, data) => {
+      $httpBackend.whenGET('https://api.ipstack.com/check?access_key=123').respond((method, url, data) => {
         return [200, {ip: '172.19.1.45'}, {}]
       });
       requester.getIp().then((res) => {
@@ -77,7 +77,7 @@
     })
 
     it('should have false value in success key on getIp Error', () => {
-      $httpBackend.whenGET('http://api.ipstack.com/check?access_key=123').respond((method, url, data) => {
+      $httpBackend.whenGET('https://api.ipstack.com/check?access_key=123').respond((method, url, data) => {
         return [200, {success: false, error: { code: 101, type: 'invalid_access_key', info: 'You have not supplied a valid API Access Key. [Technical Support: support@apilayer.com]'}}, {}]
       });
       requester.getIp().then((res) => {
@@ -88,7 +88,7 @@
     })
 
     it('should have code equals 101 on getIp Error', () => {
-      $httpBackend.whenGET('http://api.ipstack.com/check?access_key=123').respond((method, url, data) => {
+      $httpBackend.whenGET('https://api.ipstack.com/check?access_key=123').respond((method, url, data) => {
         return [200, {success: false, error: { code: 101, type: 'invalid_access_key', info: 'You have not supplied a valid API Access Key. [Technical Support: support@apilayer.com]'}}, {}]
       });
       requester.getIp().then((res) => {

@@ -15,7 +15,7 @@ ipStackModule.factory('requester', ['$http', function ($http) {
   var apiKey = null;
   return {
     getIp: function getIp() {
-      return $http.get('http://api.ipstack.com/check?access_key=' + apiKey).then(function (result) {
+      return $http.get('https://api.ipstack.com/check?access_key=' + apiKey).then(function (result) {
         return result;
       }).catch(function (err) {
         return err;

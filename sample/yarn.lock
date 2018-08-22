@@ -18,6 +18,8 @@ angular@^1.7.0:
   version "1.7.0"
   resolved "https://registry.yarnpkg.com/angular/-/angular-1.7.0.tgz#e45d679fc8d81040a4894c7ccc16a4e1ad0a9ca6"
 
-ngipstack@1.0.6:
-  version "1.0.6"
-  resolved "https://registry.yarnpkg.com/ngipstack/-/ngipstack-1.0.6.tgz#9fea7f1f235ac85e6bd16661a050e09561cfaf03"
+ngipstack@1.0.9:
+  version "1.0.9"
+  resolved "https://registry.yarnpkg.com/ngipstack/-/ngipstack-1.0.9.tgz#37c9192a0fc8bf25bb7ad0f63b00ae906e42f233"
+  dependencies:
+    angular "^1.7.0"
